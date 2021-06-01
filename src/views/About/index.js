@@ -32,8 +32,6 @@ export default memo(function About() {
       <p>{`ctrl + L ：喜欢`}</p>
       <p>{`↑ ：音量 + `}</p>
       <p>{`↓ ：音量 - `}</p>
-      <p></p>
-      <p></p>
     </div>
   );
 });
