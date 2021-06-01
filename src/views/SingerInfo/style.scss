@@ -1,0 +1,43 @@
+.singerInfo {
+  width: 1000px;
+  margin: 0 auto;
+  .top {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    color: #ebebeb;
+    .topImg {
+      border-radius: 50%;
+    }
+    .top-right {
+      flex: 1;
+      padding-left: 20px;
+      h1 {
+        color: #ebebeb;
+        padding-bottom: 20px;
+      }
+    }
+  }
+  .info {
+    .info-top {
+      padding-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .rightSpan {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        > i {
+          margin-left: 5px;
+        }
+        &:hover {
+          color: #f92e58;
+          > i {
+            color: #f92e58;
+          }
+        }
+      }
+    }
+  }
+}

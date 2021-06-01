@@ -1,0 +1,46 @@
+.tableList {
+  background: #021524;
+  color: #ece4e4;
+  :global {
+    .ant-table {
+      background: #021524;
+      color: #ece4e4;
+      margin-bottom: 100px;
+      .ant-table-placeholder:hover {
+        > td {
+          background: transparent;
+        }
+      }
+      .ant-table-tbody > tr {
+        > td {
+          border-bottom: 1px solid rgb(35, 35, 36);
+        }
+      }
+    }
+  }
+  .tableList-row {
+    > td {
+      border-bottom: 1px solid rgb(35, 35, 36);
+    }
+    &:hover {
+      > td {
+        background: #1b1b1b !important;
+      }
+    }
+    > td {
+      span.hoverSpan:hover {
+        color: #f92e58;
+        cursor: pointer;
+      }
+    }
+  }
+  :global {
+    .ant-table-thead {
+      th {
+        color: #ebebeb;
+        background: rgb(21, 35, 45);
+        border-bottom: 1px solid rgb(35, 35, 36);
+      }
+    }
+  }
+}

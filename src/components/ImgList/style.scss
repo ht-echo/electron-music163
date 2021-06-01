@@ -1,0 +1,22 @@
+.imgList {
+  width: 900px;
+  margin: 0 auto;
+  line-height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 80px;
+  .rankingItem {
+    width: 170px;
+    padding: 10px 20px;
+    .rankImg {
+      width: 130px;
+      height: 130px;
+      border-radius: 5px;
+    }
+    .rankImg,
+    .rankName {
+      cursor: pointer;
+      color: #f92e58;
+    }
+  }
+}

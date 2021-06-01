@@ -1,0 +1,46 @@
+.my-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  user-select: none;
+  border-bottom: 1px solid #471717;
+  box-sizing: border-box;
+  .left {
+    display: flex;
+    align-items: center;
+    h1 {
+      color: #fff;
+      font-size: 20px;
+      font-style: oblique;
+      font-weight: 800;
+      margin-right: 50px;
+    }
+    .iconBox {
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      cursor: pointer;
+      background: rgba(116, 113, 113, 0.3);
+      .iconInfo {
+        color: rgb(180, 175, 175);
+      }
+    }
+  }
+  .nav {
+    > a {
+      color: #838688;
+      margin-right: 10px;
+    }
+    :global {
+      a.active {
+        color: #cc294e !important;
+      }
+    }
+  }
+}

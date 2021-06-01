@@ -1,0 +1,23 @@
+.progress {
+  flex: 1;
+  height: 5px;
+  border-radius: 3px;
+  background: rgb(0, 0, 0);
+  cursor: pointer;
+  .played {
+    background: rgba(255, 255, 255, 0.534);
+    height: 100%;
+    position: relative;
+    .played-bar {
+      height: 100%;
+      position: absolute;
+      right: -10px;
+      top: -3px;
+      width: 10px;
+      height: 10px;
+      background: #ebebeb;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}

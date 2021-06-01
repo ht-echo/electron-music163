@@ -1,0 +1,33 @@
+.listInfo {
+    display: flex;
+    .sub {
+      width: 200px;
+      > img {
+        width: 200px;
+        height: 200px;
+      }
+      .title {
+        line-height: 24px;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 0;
+      }
+      .desc {
+        font-size: 12px;
+        line-height: 24px;
+        color: #ebebeb;
+      }
+      .control {
+        > i {
+          margin-right: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+    .info {
+      flex: 1;
+      padding: 0 30px;
+  
+    }
+  }
+  

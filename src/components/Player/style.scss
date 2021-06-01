@@ -1,0 +1,222 @@
+.player {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 80px;
+  background: #021524;
+  border-top: 1px solid rgb(71, 23, 23);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  .lryicBoard {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(63, 61, 61, 0.6);
+    color: #ebebeb;
+    font-size: 20px;
+    padding: 5px 20px;
+  }
+
+  .playBtns {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > i {
+      font-size: 28px;
+      padding-left: 10px;
+      cursor: pointer;
+    }
+  }
+  .imgBox {
+    width: 50px;
+    height: 50px;
+    margin: 0 16px;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      .hoverBg {
+        display: block;
+      }
+    }
+    .userImg {
+      width: 50px;
+      height: 50px;
+    }
+    .hoverBg {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: rgba(37, 33, 33, 0.6);
+      width: 100%;
+      height: 100%;
+      .upIcon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .play-progress {
+    flex: 1;
+    .title {
+      .songer {
+        color: #9e9e9e;
+        margin-left: 20px;
+        font-size: 12px;
+      }
+    }
+    .progress-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .time {
+        color: #9e9e9e;
+        padding: 0 16px;
+        display: flex;
+        > span {
+          padding: 0 3px;
+        }
+      }
+      .audio {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        i {
+          padding-right: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .control-btns {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    > i,
+    > span {
+      margin-right: 10px;
+      color: #9e9e9e;
+      cursor: pointer;
+    }
+  }
+}
+.drawerInfo {
+  display: flex;
+  align-items: center;
+  width: 900px;
+  margin: 0 auto;
+  height: 100%;
+  color: #ebebeb;
+  margin-top: -30px;
+  .closeDrawer {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    color: #8c8c8c;
+    font-size: 20px;
+  }
+  .userImg {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+  .right-info {
+    flex: 1;
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      padding-bottom: 30px;
+      h1 {
+        color: #c2bcbc;
+        padding-right: 20px;
+      }
+      > span {
+        color: rgb(119, 113, 113);
+      }
+    }
+    .lyricList {
+      color: #9e9a9a;
+      text-align: center;
+      height: 50vh;
+      line-height: 38px;
+      overflow-y: scroll;
+      padding: 16vh 50px 0;
+      &::-webkit-scrollbar {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        display: none;
+      }
+      &:hover {
+        &::-webkit-scrollbar-thumb {
+          display: block;
+        }
+      }
+      .lyricListInfo {
+        // transition: all 1s;
+        > p {
+          height: 38px;
+        }
+      }
+      .currentLyric {
+        color: rgb(235, 219, 219);
+        font-size: 18px;
+      }
+    }
+  }
+}
+.noData {
+  color: #ebebeb;
+  margin-top: 150px;
+  text-align: center;
+}
+.playListDrawer {
+  :global {
+    .ant-table-wrapper,
+    .ant-table {
+      background: transparent;
+    }
+  }
+  .playList {
+    position: relative;
+    height: 100%;
+    .playListHead {
+      color: #ebebeb;
+      padding: 20px 20px 0;
+      line-height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > span {
+        font-size: 13px;
+        &:first-child {
+          font-size: 12px;
+          color: rgb(97, 92, 92);
+        }
+        &:last-child {
+          cursor: pointer;
+          &:hover {
+            color: #f92e58;
+          }
+        }
+      }
+    }
+    .tableBox {
+      position: relative;
+      height: calc(100% - 60px);
+      overflow-y: scroll;
+    }
+  }
+}
