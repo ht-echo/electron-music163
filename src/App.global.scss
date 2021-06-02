@@ -3,8 +3,8 @@
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
 @import '~antd/dist/antd.css';
-@import './common/scss/normalize.scss';
-@import './common/scss/iconfont.scss';
+@import '~./common/scss/normalize.css';
+@import '~./common/scss/iconfont.css';
 
 body {
   position: relative;
@@ -21,17 +21,19 @@ body {
   margin: 0;
   padding: 0;
 }
+
 #root {
   height: 100%;
   background: #021524;
-  // background-image: linear-gradient(to right, #080e13 0%, #021524 100%);
+  /* background-image: linear-gradient(to right, #080e13 0%, #021524 100%); */
   user-select: none;
-
 }
+
 #app {
   background: #021524;
   color: #ebebeb !important;
 }
+
 ::-webkit-scrollbar {
   width: 8px;
   background: #021524;
@@ -43,13 +45,19 @@ body {
   border-radius: 4px;
   background-color: rgba(144, 147, 153, 0.4);
 }
+
 .icon-love {
   color: #f92e58 !important;
 }
+
 .app-spinBox {
   position: relative;
   height: calc(100vh - 80px);
   min-height: 300px;
   overflow-y: scroll;
   padding: 20px;
+}
+.message-error-class {
+  background: rgba(92, 90, 90, 0.5);
+  color: rgb(129, 125, 125);
 }

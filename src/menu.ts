@@ -194,24 +194,24 @@ export default class MenuBuilder {
 
   buildDefaultTemplate() {
     const templateDefault = [
+      // {
+      //   label: '&File',
+      //   submenu: [
+      //     {
+      //       label: '&Open',
+      //       accelerator: 'Ctrl+O',
+      //     },
+      //     {
+      //       label: '&Close',
+      //       accelerator: 'Ctrl+W',
+      //       click: () => {
+      //         this.mainWindow.close();
+      //       },
+      //     },
+      //   ],
+      // },
       {
-        label: '&File',
-        submenu: [
-          {
-            label: '&Open',
-            accelerator: 'Ctrl+O',
-          },
-          {
-            label: '&Close',
-            accelerator: 'Ctrl+W',
-            click: () => {
-              this.mainWindow.close();
-            },
-          },
-        ],
-      },
-      {
-        label: '&View',
+        label: '视图',
         submenu:
           process.env.NODE_ENV === 'development' ||
           process.env.DEBUG_PROD === 'true'
@@ -242,7 +242,7 @@ export default class MenuBuilder {
               ]
             : [
                 {
-                  label: 'Toggle &Full Screen',
+                  label: '切换全屏',
                   accelerator: 'F11',
                   click: () => {
                     this.mainWindow.setFullScreen(
@@ -250,35 +250,28 @@ export default class MenuBuilder {
                     );
                   },
                 },
+                {
+                  label: '切换开发者工具',
+                  accelerator: 'Alt+Ctrl+I',
+                  click: () => {
+                    this.mainWindow.webContents.toggleDevTools();
+                  },
+                },
               ],
       },
       {
-        label: 'Help',
+        label: '关于',
         submenu: [
           {
-            label: 'Learn More',
+            label: '仓库地址',
             click() {
-              shell.openExternal('https://electronjs.org');
+              window.open('https://gitee.com/ht-echo/electron-music163');
             },
           },
           {
-            label: 'Documentation',
+            label: 'exe下载',
             click() {
-              shell.openExternal(
-                'https://github.com/electron/electron/tree/master/docs#readme'
-              );
-            },
-          },
-          {
-            label: 'Community Discussions',
-            click() {
-              shell.openExternal('https://www.electronjs.org/community');
-            },
-          },
-          {
-            label: 'Search Issues',
-            click() {
-              shell.openExternal('https://github.com/electron/electron/issues');
+              window.open('https://gitee.com/ht-echo/electron-music163/exe');
             },
           },
         ],

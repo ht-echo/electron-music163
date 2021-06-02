@@ -14,7 +14,6 @@ import {
 import $db from './data';
 
 import { Spin } from 'antd';
-// import icon from '../assets/icon.svg';
 import './App.global.scss';
 import Recommend from './views/Recommend';
 import Ranking from './views/Ranking';

@@ -14,7 +14,7 @@ import path from 'path';
 import { app, BrowserWindow, shell, Menu } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
-// import MenuBuilder from './menu';
+import MenuBuilder from './menu';
 
 export default class AppUpdater {
   constructor() {
@@ -59,7 +59,7 @@ const createWindow = () => {
   //   await installExtensions();
   // }
 
-  Menu.setApplicationMenu(null);
+  // Menu.setApplicationMenu(null);
   const RESOURCES_PATH = app.isPackaged
     ? path.join(process.resourcesPath, 'assets')
     : path.join(__dirname, '../assets');
@@ -79,29 +79,9 @@ const createWindow = () => {
     icon: getAssetPath('icon.png'),
     webPreferences: {
       nodeIntegration: true,
-      // preload: path.join(__dirname, 'preload.js'),
       enableRemoteModule: true,
-      contextIsolation: false,
     },
   });
-  // mainWindow.setThumbarButtons([
-  //   {
-  //     tooltip: 'button1',
-  //     icon: path.join(__dirname, 'button1.png'),
-  //     click() {
-  //       console.log('button1 clicked');
-  //     },
-  //   },
-  //   {
-  //     tooltip: 'button2',
-  //     icon: path.join(__dirname, 'button2.png'),
-  //     flags: ['enabled', 'dismissonclick'],
-  //     click() {
-  //       console.log('button2 clicked.');
-  //     },
-  //   },
-  // ]);
-  // mainWindow.webContents.closeDevTools();
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 
   // @TODO: Use 'ready-to-show' event
@@ -122,8 +102,8 @@ const createWindow = () => {
     mainWindow = null;
   });
 
-  // const menuBuilder = new MenuBuilder(mainWindow);
-  // menuBuilder.buildMenu();
+  const menuBuilder = new MenuBuilder(mainWindow);
+  menuBuilder.buildMenu();
 
   // Open urls in the user's browser
   mainWindow.webContents.on('new-window', (event, url) => {
