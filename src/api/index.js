@@ -2,7 +2,7 @@ import axios from 'axios';
 if (process.env.NODE_ENV === 'development') {
   axios.defaults.baseURL = 'http://localhost:3000';
 } else {
-  axios.defaults.baseURL = 'https://vercel-cloudmusic.vercel.app';
+  axios.defaults.baseURL = 'http://81.68.141.185:3000';
 }
 import store from '../store';
 import * as actionTypes from '../store/actionTypes';
