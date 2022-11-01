@@ -2,7 +2,7 @@ import axios from 'axios';
 if (process.env.NODE_ENV === 'development') {
   axios.defaults.baseURL = 'http://localhost:3000';
 } else {
-  axios.defaults.baseURL = 'http://81.68.141.185:3000';
+  axios.defaults.baseURL = 'https://www.ht-echo.top';
 }
 import store from '../store';
 import * as actionTypes from '../store/actionTypes';
