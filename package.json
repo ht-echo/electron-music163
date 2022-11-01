@@ -3,6 +3,7 @@
   "productName": "music163 demo",
   "description": "使用react + electron + antd开发",
   "scripts": {
+	"dist": "electron-builder",
     "build": "concurrently \"yarn build:main\" \"yarn build:renderer\"",
     "build:main": "cross-env NODE_ENV=production webpack --config ./.erb/configs/webpack.config.main.prod.babel.js",
     "build:renderer": "cross-env NODE_ENV=production webpack --config ./.erb/configs/webpack.config.renderer.prod.babel.js",
